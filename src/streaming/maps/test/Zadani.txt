@@ -1,0 +1,43 @@
+Soubory:
+book.csv - knihy
+chapter.csv - kapitoly v knihach
+
+Ke splneni: parse a nacteni obou souboru souboru do programu
+Ukolem je namapovat jednotlive kapitoly ke kniham.
+
+Info:
+Unikantnich autoru: 8
+Knih: 100
+Kapitol: 2000
+
+Dodelat vse potrebne pro tridu Chapter (pozor, at nactete vse potrebne).
+Dodelat prazdne metody v Book.
+
+Vystupy:
+
+Vypsat format: autor, pocet knih
+
+Vypsat top 5 knih s nejvetsim poctem stran.
+
+Napsat metodu authorPages(...), ktera vrati celkovy pocet stran od autora.
+
+Kontrola:
+autor - pocet knih:
+Rachel Alexander: 13 books
+Adam Alexander: 9 books
+William Mitchell: 11 books
+Matthew Hernandez: 13 books
+Richard Young: 10 books
+Hector Jacobs: 15 books
+Mary Jordan: 17 books
+Brittany Huynh: 12 books
+
+5 knih s nejvetsim poctem stran:
+Similar including term: 528
+Offer head: 493
+Wall fast edge: 474
+Network summer: 467
+Trouble: 466
+
+Pocet Stran priklad:
+Matthew Hernandez: Matthew 4254

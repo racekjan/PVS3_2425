@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class GenreMapping {
 
-    static ArrayList<Movie> loadData(String path) {
+    static ArrayList<Movie> loadData(String path) {//cteni ze souboru - dulezite!!
         try {
             List<String> lines = Files.readAllLines(Paths.get(path));
             ArrayList<Movie> movies = new ArrayList<>();
