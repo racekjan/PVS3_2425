@@ -1,0 +1,40 @@
+Tasks: meds_sales.csv
+
+----
+Parse + tvorba třídy.
+
+Struktura dat:
+
+Name,Pieces,Pharmacy,Month,Insurance_Paid
+Lamotrigine,12,MediCare,7,false
+
+Název léku, kolik kusů bylo prodáno (celé kusy), název lékárny, měsíc v roce, zda prodej hradila pojišťovna
+----
+
+Vytvořte seznam UniqueMeds, do něj uložte pouze unikátní názvy léků.
+
+Vytvořte (a vypište) mapy:
+1. Počet objednávek k lékárně, které hradila pojišťovna
+2. Počet prodaných kusů léků v lékarně
+
+Vytvořte metodu int soldIn(List<MedicalSale> sales, int from, int to)
+Vezme počet všech prodaných kusů léků v měsících <from, to>
+Pozn: počítejte s tím, že vždy bude platit from < to
+
+Vytvořte mapování dle vlastní kategorie na kvartální období:
+Q1: měsíce 1-3
+Q2: měsíce 4-6
+Q3: měsíce 7-9
+Q4: měsíce 10-12
+
+Mapa bude:
+Map<String, Integer>
+Mapa bude držet hodnoty počtu prodaných léků za období.
+
+Kontrola:
+Celkem načíst: 1000
+UniqueMeds: List, který má 40 prvků
+Mapy:
+objednávky, pojištěné: {RxMart=71, MediCare=72, MedsRUS=55, PharmaHealth=76, HealthyChoice=59, DrugZone=67}
+Léky za lékárnu: {RxMart=1895, MediCare=2278, MedsRUS=1829, PharmaHealth=2148, HealthyChoice=2228, DrugZone=2216}
+
