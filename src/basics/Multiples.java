@@ -1,36 +1,34 @@
-package gui;
-
-import basics.GridPane;
+package basics;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Multiples extends JFrame {
-
-    public Multiples() throws HeadlessException {
+    public Multiples() throws HeadlessException{
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setLayout(new FlowLayout());
-        JTextField textInput = new JTextField("number here");
+        JTextField textinput = new JTextField("Area here");
         JButton draw = new JButton("Draw");
 
-        textInput.setFont(new Font("Consolas", Font.BOLD, 30));
-        textInput.setHorizontalAlignment(SwingConstants.CENTER);
+        textinput.setFont(new Font("Consolas", Font.BOLD, 30));
+        textinput.setHorizontalAlignment(SwingConstants.CENTER);
         draw.setFont(new Font("Consolas", Font.BOLD, 30));
 
         draw.addActionListener(e -> {
             int number;
             try {
-                number = Integer.parseInt(textInput.getText());
+                number = Integer.parseInt(textinput.getText());
                 //new GridPane(number).setVisible(true);
-            } catch (NumberFormatException ne){
-                JOptionPane.showMessageDialog(null, "Not a number");
+            }catch (NumberFormatException ne){
+                JOptionPane.showMessageDialog(null,"Not a number");
             }
         });
 
-        this.add(textInput);
+        this.add(textinput);
         this.add(draw);
         this.pack();
+
     }
 
     public static void main(String[] args) {

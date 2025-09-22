@@ -18,7 +18,7 @@ class InputWindow extends JFrame {
 
         JTextField input = new JTextField("Value");
         input.setPreferredSize(new Dimension(500, 100));
-        input.setFont(new Font("Consolas", Font.BOLD, 32));
+        input.setFont(new Font("Baumans", Font.BOLD, 32));
         input.setHorizontalAlignment(SwingConstants.CENTER);
 
 
@@ -36,7 +36,7 @@ class InputWindow extends JFrame {
             }
         });
         inButton.setPreferredSize(new Dimension(100, 100));
-        inButton.setFont(new Font("Consolas", Font.BOLD, 32));
+        inButton.setFont(new Font("Baumans", Font.BOLD, 32));
 
         this.add(input);
         this.add(inButton);
@@ -51,16 +51,14 @@ class ResultWindow extends JFrame {
 
     int number;
     static void getNominals(int number, JPanel panel) {
-        System.out.println("Number: " + number);
         for (int i = 0, count = 0; i < NOMINALS.length; i++, count = 0) {
             while (number >= NOMINALS[i]) {
                 number -= NOMINALS[i];
                 count++;
             }
             panel.add(new BankTile(NOMINALS[i], count));
-            System.out.println(count + "x " + NOMINALS[i]);
+            //System.out.println(count + "x " + NOMINALS[i]);
         }
-        System.out.println();
     }
 
     public ResultWindow(int number) {
@@ -73,7 +71,7 @@ class ResultWindow extends JFrame {
         totalValue.setPreferredSize(new Dimension(400, 100));
         totalValue.setHorizontalAlignment(SwingConstants.CENTER);
         totalValue.setBorder(BorderFactory.createLineBorder(Color.black, 3));
-        totalValue.setFont(new Font("Consolas", Font.BOLD, 32));
+        totalValue.setFont(new Font("Baumans", Font.BOLD, 32));
 
         JPanel gridPanel = new JPanel();
         gridPanel.setLayout(new GridLayout(3,4, 3, 3));
@@ -93,10 +91,12 @@ class ResultWindow extends JFrame {
         JLabel valueLabel = new JLabel(String.valueOf(value));
         JLabel amountLabel = new JLabel(amount + "x");
 
-        valueLabel.setFont(new Font("Consolas", Font.BOLD, 24));
+        valueLabel.setFont(new Font("Baumans", Font.BOLD, 24));
+        valueLabel.setForeground(Color.white);
         valueLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        amountLabel.setFont(new Font("Consolas", Font.BOLD, 24));
+        amountLabel.setFont(new Font("Baumans", Font.BOLD, 24));
         amountLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        amountLabel.setForeground(Color.white);
         valueLabel.setBorder(BorderFactory.createLineBorder(Color.black, 1));
         amountLabel.setBorder(BorderFactory.createLineBorder(Color.black, 1));
 
@@ -106,9 +106,9 @@ class ResultWindow extends JFrame {
 
 
         if (amount > 0){
-            this.setBackground(Color.green);
+            this.setBackground(new Color(77, 201, 110));
         } else {
-            this.setBackground(Color.red);
+            this.setBackground(new Color(186, 53, 50));
         }
         this.add(amountLabel);
         this.add(valueLabel);
